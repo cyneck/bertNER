@@ -19,7 +19,7 @@ flags = tf.app.flags
 flags.DEFINE_boolean("clean",       False,      "clean train folder")
 flags.DEFINE_boolean("train",       False,      "Wither train the model")
 # configurations for the model
-flags.DEFINE_integer("batch_size",  128,         "batch size")
+flags.DEFINE_integer("batch_size",  32,         "batch size")
 flags.DEFINE_integer("seg_dim",     20,         "Embedding size for segmentation, 0 if not used")
 flags.DEFINE_integer("char_dim",    100,        "Embedding size for characters")
 flags.DEFINE_integer("lstm_dim",    200,        "Num of hidden units in LSTM")
@@ -34,7 +34,7 @@ flags.DEFINE_boolean("zeros",       False,      "Wither replace digits with zero
 flags.DEFINE_boolean("lower",       True,       "Wither lower case")
 
 flags.DEFINE_integer("max_seq_len", 128,        "max sequence length for bert")
-flags.DEFINE_integer("max_epoch",   100,        "maximum training epochs")
+flags.DEFINE_integer("max_epoch",   50,        "maximum training epochs")
 flags.DEFINE_integer("steps_check", 100,        "steps per checkpoint")
 flags.DEFINE_string("ckpt_path",    "ckpt",      "Path to save model")
 flags.DEFINE_string("summary_path", "summary",      "Path to store summaries")
