@@ -152,7 +152,7 @@ def train():
 
         logger.info("start training")
         loss = []
-        for i in range(100):
+        for i in range(10):
             for batch in train_manager.iter_batch(shuffle=True):
                 step, batch_loss = model.run_step(sess, True, batch)
 
